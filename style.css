@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #24272e;
+}
+
+header{
+    background: #e25b4d;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+header>h1{
+    font-size: 60px;
+    font-family: 'Fruktur', cursive;
+}
+
+.splash{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    padding: 0px 15px;
+    text-align: center;
+}
+
+.splash.display-none{
+    position: fixed;
+    visibility: collapse;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    transition: all 0.5s;
+}
+
+.cuerpo{
+    z-index: 9;
+    margin: 0px 15px;
+}
+
+.splash-container>h1{
+    font-family: 'Dancing Script', cursive !important;
+}
+
+.caja-imagen{
+    display: block;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja-imagen>img{
+    height: 80px;
+    width: auto;
+}
+
+.marcador{
+    border: 3px solid #fff;
+    margin: 20px auto;
+    width: 200px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-align: center;
+    padding: 15px 20px;
+    position: relative;
+    font-family: 'Fruktur', cursive;
+}
+
+.badge{
+    background: #e25b4d;
+    font-size: 15px;
+    border: thin solid #fff;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.user-label{
+    position: absolute;
+    top: auto;
+    left: -30px;
+    height: 50%;
+    width: 40%;
+}
+
+.comp-label{
+    position: absolute;
+    top: auto;
+    right: -30px;
+    height: 50%;
+    width: 40%;
+}
+
+#user-score, #com-score{
+    padding: 5px;
+    font-size: 30px;
+}
+
+.result{
+    font-size: 40px;
+    color: #fff;
+}
+
+.result>p{
+    text-align: center;
+    font-family: 'Fruktur', cursive;
+}
+
+/* .resultRazon{
+    font-size: 40px;
+    color: #fff;
+}
+
+.resultRazon>p{
+    text-align: center;
+    font-family: 'Fruktur', cursive;
+} */
+
+.opciones{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.choice{
+    display: inline-block;
+    border: 4px solid #fff;
+    border-radius: 50px;
+    background:#fff;
+    padding: 15px;
+    margin: 20px;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.choice:hover{
+    border-color: #e25b4d !important;
+    cursor: pointer;
+}
+
+#accion{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Fruktur', cursive;
+}
+
+.choice>img{
+    height: 60px;
+    width: auto;
+    border-radius: 30%;
+}
+
+@keyframes fadeIn {
+    to{
+        opacity: 1;
+    }
+}
+
+footer{
+    position: fixed;
+    background: #e25b4d;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 600;
+    color: #fff;
+}
+
+.copyright{
+    background: #fff;
+    height: 55px;
+    width: 55px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.copyright>img{
+    height: 45px;
+    width: auto;
+}
+
+.fade-in{
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.fade-in1{
+    opacity: 0;
+    animation: fadeIn 3s ease-in forwards;
+}
+
+.verde{
+    border: 5px solid #3CCF1A;
+    box-shadow: 0 0 10px #4BC62E;
+}
+
+.rojo{
+    border: 5px solid #D30E0E;
+    box-shadow: 0 0 10px #CC2A2A;
+}
+
+.gris{
+    border: 5px solid #D0C7C7;
+    box-shadow: 0 0 10px #BFB6B6;
+}
+
+@media only screen and (max-width: 430px){
+    header h1{
+        font-size: 30px;
+        transition: all 0.5s ease-out;
+    }
+
+    .result p{
+        font-size: 25px;
+    }
+
+    .choice{
+        padding: 15px;
+        height: 80px;
+        width: 80px;
+        transition: all 0.3s ease;
+    }
+    
+    #accion{
+        font-size: 20px;
+    }
+    
+    .choice>img{
+        margin: auto;
+        height: 40px;
+        transition: all 0.3s ease;
+    }
+
+    .opciones{
+        margin: 20px 10px;
+        transition: all 0.3s ease;
+    }
+}
+
+@media only screen and (max-height: 630px) {
+    .cuerpo{
+        margin-bottom: 80px;
+    }
+
+    .opciones{
+        margin: 10px 10px;
+        transition: all 0.3s ease;
+    }
+}
+
+
